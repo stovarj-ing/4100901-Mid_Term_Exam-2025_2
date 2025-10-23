@@ -10,6 +10,7 @@
 volatile uint8_t button_event = 0;
 volatile char uart_event_char = 0;
 
+
 // Contador de milisegundos del sistema
 volatile uint32_t system_ms_counter = 0;
 
@@ -45,7 +46,6 @@ int main(void)
 {
     peripherals_init();
     room_control_app_init();
-    uart_send_string("Sistema de Control de Sala Inicializado!\r\n");
 
     // Bucle principal: procesa eventos
     while (1) {
